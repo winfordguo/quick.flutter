@@ -12,8 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.1.2
-  libusb: ^0.3.23+2
-  ffi: ^1.2.0
+  libusb:
+    git:
+      url: https://github.com/winfordguo/libusb.dart.git
+      ref: 0.3.23+2.fix
+  ffi: ^2.0.1
 
 dev_dependencies:
   flutter_test:
