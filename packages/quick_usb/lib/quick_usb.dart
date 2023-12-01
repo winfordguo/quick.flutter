@@ -4,8 +4,10 @@ import 'src/common.dart';
 import 'src/quick_usb_platform_interface.dart';
 
 export 'src/common.dart';
-export 'src/quick_usb_android.dart';
-export 'src/quick_usb_desktop.dart';
+export 'src/quick_usb_android.dart'
+    if (dart.library.js) 'src/quick_usb_unsupported.dart';
+export 'src/quick_usb_desktop.dart'
+    if (dart.library.js) 'src/quick_usb_unsupported.dart';
 
 QuickUsbPlatform get _platform => QuickUsbPlatform.instance;
 
